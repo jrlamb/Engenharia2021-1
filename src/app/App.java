@@ -6,7 +6,9 @@
 package app;
 
 import pagamento.BoletoBancario;
-import pagamento.CartaoCredito;
+import cartao.Cartao;
+import cartao.Credito;
+import cartao.Debito;
 import pagamento.Pix;
 import pedido.Pedido;
 
@@ -25,16 +27,13 @@ public class App {
         Pedido pedido = new Pedido(new Pix());
         pedido.pagar();
         
-        System.out.println("Pedido 2::");
-        Pedido p2 = new Pedido(new CartaoCredito());
+        System.out.println("\nPedido 2::");
+        Pedido p2 = new Pedido(new Credito());
         p2.pagar();
         
-        System.out.println("Pedido 3");
-        Pedido p3 = new Pedido();
-        //pedido.add()
-        pedido.setTipoDePagamento(new CartaoCredito());
-        pedido.pagar();
-        
+        System.out.println("\nPedido 3::");
+        Pedido p3 = new Pedido(new Debito());
+        p3.pagar();
         
     }
     

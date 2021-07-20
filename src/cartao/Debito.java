@@ -3,17 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pagamento;
+package cartao;
 
 /**
  *
  * @author julia
  */
-public class CartaoCredito implements FormaPagamento {
+public class Debito extends Cartao{
 
     @Override
-    public void pagar() {
-        System.out.println("Verificando linha... Conectando ao SITEF... Verificando limites...");
+    public void verificaSaldo() {
+        System.out.println("Verificando o saldo da conta corrente");
     }
     
 }
